@@ -1,0 +1,42 @@
+li {
+    color: green;
+}
+
+li[class="a"] {
+    color: red;
+}
+
+li[class] {
+    color: blue;
+}
+
+li[class="a b"] {
+    color: orange;
+}
+
+/* 伪类选择器 */
+/* article p:first-child {
+    font-size: 120%;
+    font-weight: bold;
+} */
+
+a:link,
+a:visited {
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+/* 伪元素选择器 */
+article p::first-line {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+/* 后代选择器 */
+.box p {
+    color: red;
+}
