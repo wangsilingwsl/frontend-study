@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What_is_JavaScript</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 描述 -->
+    <meta name="description"
+        content="JavaScript 是一种脚本语言，可以用来创建动态更新的内容，控制多媒体，制作图像动画，还有很多。（好吧，虽然它不是万能的，但可以通过简短的代码来实现神奇的功能。）">
+</head>
+
+<body>
+    <p>Player 1: Chris</p>
+
+    <button>Click me</button>
+
+</body>
+<script>
+    const para = document.querySelector("p");
+
+    para.addEventListener("click", updateName);
+
+    function updateName() {
+        const name = prompt("Enter a new name");
+        para.textContent = `Player 1: ${name}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        function createParagraph() {
+            const para = document.createElement("p");
+            para.textContent = "你点击了按钮！";
+            document.body.appendChild(para);
+        }
+
+        const buttons = document.querySelectorAll("button");
+
+        for (const button of buttons) {
+            button.addEventListener("click", createParagraph);
+        }
+    });
+
+
+</script>
+
+</html>
